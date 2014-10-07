@@ -385,6 +385,16 @@ class ZenodoForm(WebDepositForm):
             ),
         ),
     )
+    extract_metadata = zfields.ExtractMetadataField(
+        label="",
+        widget=ButtonWidget(
+            label=_("Extract Metadata"),
+            icon='fa fa-barcode',
+            tooltip=_(
+                'Try to extract meta-data from a publication'
+            ),
+        ),
+    )
     publication_date = fields.Date(
         label=_('Publication date'),
         icon='fa fa-calendar fa-fw',
@@ -784,7 +794,8 @@ class ZenodoForm(WebDepositForm):
             ['upload_type', 'publication_type', 'image_type', ],
             {'indication': 'required'}),
         ('Basic information', [
-            'doi', 'prereserve_doi', 'publication_date', 'title',  'creators', 'description',
+            'doi', 'prereserve_doi', 'extract_metadata', 'publication_date',
+            'title',  'creators', 'description',
             'keywords', 'notes',
         ], {'indication': 'required', }),
         ('License', [

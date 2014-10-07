@@ -89,6 +89,8 @@
         </div>
     {% elif field.short_name == 'prereserve_doi' %}
         {{ field_display(field, field_class="btn  btn-default btn-xs") }}
+    {% elif field.short_name == 'extract_metadata' %}
+        {{ field_display(field, field_class="btn btn-default btn-xs") }}
     {% elif field.short_name == 'plupload_file' %}
         {{ field_display(field, field_size="col-md-12") }}
     {% elif field.short_name == 'references' %}

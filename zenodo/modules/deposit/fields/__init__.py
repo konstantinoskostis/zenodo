@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 #
 ## This file is part of ZENODO.
-## Copyright (C) 2012, 2013 CERN.
+## Copyright (C) 2012, 2013, 2014 CERN.
 ##
 ## ZENODO is free software: you can redistribute it and/or modify
 ## it under the terms of the GNU General Public License as published by
@@ -21,6 +21,7 @@
 ## or submit itself to any jurisdiction.
 
 from .access_rights_field import AccessRightField
+from .extract_metadata_field import ExtractMetadataField
 from .license_field import LicenseField
 from .objecttype_field import UploadTypeField
 from .related_identifiers_field import RelatedIdentifiersField
@@ -30,6 +31,7 @@ from .core import TextAreaListField
 
 __all__ = [
     'AccessRightField',
+    'ExtractMetadataField',
     'LicenseField',
     'UploadTypeField',
     'RelatedIdentifiersField',
